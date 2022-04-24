@@ -1,3 +1,13 @@
+/* Script for testing a servo
+ * Allows you to position the servo by sending angle values from the serial monitor
+ * Also contains an optional "Return to zero" function, toggled by sending an angle of "-1"
+ * Default state for the "Return to zero" function is ON
+ * 
+ * Author: Alec Lin
+ * Date: April 24, 2022
+ * Version: 1.0
+ */
+
 #include <Servo.h>
 
 Servo servo1;
@@ -16,7 +26,7 @@ void loop() {
     incoming_position = Serial.parseInt();
     if (incoming_position == -1)
     {
-      if (return_to_zero)
+      if (return_to_zero)   
       {
         Serial.println("Return to zero is OFF");
         return_to_zero = false;
@@ -33,7 +43,7 @@ void loop() {
       Serial.println(incoming_position);
       servo1.write(incoming_position);
   
-      // Return to zero
+      // Set servo back to zero position if return to zero is enabled
       if (return_to_zero)
       {
         delay(1000);
