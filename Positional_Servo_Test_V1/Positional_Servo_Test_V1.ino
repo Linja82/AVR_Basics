@@ -1,4 +1,4 @@
-/* Script for testing a servo
+/* Script for testing positional servo motors
  * Allows you to position the servo by sending angle values from the serial monitor
  * Also contains an optional "Return to zero" function, toggled by sending an angle of "-1"
  * Default state for the "Return to zero" function is ON
