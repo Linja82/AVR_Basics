@@ -3,6 +3,8 @@
  * Also contains an optional "Return to zero" function, toggled by sending an angle of "-1"
  * Default state for the "Return to zero" function is ON
  * 
+ * Developed for the UNO, but will probably work on other boards
+ * 
  * Author: Alec Lin
  * Date: April 24, 2022
  * Version: 1.0
