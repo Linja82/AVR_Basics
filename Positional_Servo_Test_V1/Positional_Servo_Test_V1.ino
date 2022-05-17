@@ -16,7 +16,7 @@ Servo servo1;
 
 int servo1_pin = 9;           // The PWM pin that the signal pin of the servo is connected to
 int incoming_position = 0;  
-bool return_to_zero = true;
+bool return_to_zero = false;
 
 void setup() {
   Serial.begin(9600);
