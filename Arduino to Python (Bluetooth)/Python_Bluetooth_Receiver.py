@@ -7,10 +7,10 @@
 import serial
 import time
 
-size = 20   # Number of bytes that the read function will read
+#size = 200   # Number of bytes that the read function will read
 
-ser = serial.Serial(port="COM8", baudrate=9600, timeout=1)
+ser = serial.Serial(port="COM25", baudrate=9600, timeout=0, parity=serial.PARITY_EVEN, rtscts=1)
 
-while(True):    
-    s = ser.read(size)
-    print(s)
+while True:    
+    s = ser.readline()
+    print(s.decode('utf-8'))
