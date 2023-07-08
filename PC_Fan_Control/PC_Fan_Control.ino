@@ -3,6 +3,8 @@
  * This should work for 5V and 12V fans
  * 
  * This will only work on SAMD21 µControllers. Will not work on an Arduino
+ *
+ * Tested on Noctua fans.
  */
 
 #define FANPIN 3         // Pin on the Seeeduino that the fan PWM pin is connected to
